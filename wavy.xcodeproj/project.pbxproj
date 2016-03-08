@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		EF605E861C8F60D40092617C /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		EF605E861C8F60D40092617C /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
+		EF605E871C8F610A0092617C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EF605E881C8F610A0092617C /* gfx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gfx.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		EF605E7B1C8F60C60092617C = {
 			isa = PBXGroup;
 			children = (
+				EF605E871C8F610A0092617C /* main.c */,
+				EF605E881C8F610A0092617C /* gfx.h */,
 				EF605E861C8F60D40092617C /* makefile */,
 			);
 			sourceTree = "<group>";

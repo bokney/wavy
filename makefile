@@ -1,12 +1,18 @@
-CC = /opt/gbdk/bin/lcc
+
+BIN = /opt/gbdk-n-master/bin
+NEW = ./new
+
+LCC  = /opt/gbdk/bin/lcc
+OLD = ./old
 
 make:
-	$(CC) -Wa-l -Wf-bo1 -c -o gfx1.o gfx1.s
-	$(CC) -Wa-l -Wf-bo2 -c -o gfx2.o gfx2.s
-	$(CC) -Wa-l -Wf-bo3 -c -o gfx3.o gfx3.s
-	$(CC) -Wa-l -c -o main.o main.c
-	$(CC) -Wl-m -Wl-yt1 -Wl-yo4 -Wl-ya4 -o output.gb gfx1.o gfx2.o gfx3.o main.o
+	mkdir -p $(OLD)
+	$(LCC) -Wa-l -c -o $(OLD)/main.o main.c
+	$(LCC) -Wl-m -Wl-yt1 -o $(OLD)/output.gb $(OLD)/main.o
+	mkdir -p $(NEW)
+	$(BIN)/gbdk-n-compile.sh main.c -o $(NEW)/main.rel
+	$(BIN)/gbdk-n-link.sh $(NEW)/main.rel -o $(NEW)/main.ihx
+	$(BIN)/gbdk-n-make-rom.sh $(NEW)/main.ihx main.gb
 
 clean:
 	rm *.lst *.o *.map *.gb
-
