@@ -12,7 +12,7 @@ make:
 	mkdir -p $(NEW)
 	$(BIN)/gbdk-n-compile.sh main.c -o $(NEW)/main.rel
 	$(BIN)/gbdk-n-link.sh $(NEW)/main.rel -o $(NEW)/main.ihx
-	$(BIN)/gbdk-n-make-rom.sh $(NEW)/main.ihx main.gb
+	$(BIN)/gbdk-n-make-rom.sh $(NEW)/main.ihx $(NEW)/main.gb
 
 clean:
 	rm *.lst *.o *.map *.gb

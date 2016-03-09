@@ -184,6 +184,7 @@
 				EF605E851C8F60C60092617C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
